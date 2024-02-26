@@ -31,6 +31,7 @@ app.get('/', async (req, res) => {
   });
 });
 
+
 app.listen(port, () => {
   console.log(`🚀 server running on PORT: ${port} http://localhost:${port}/`);
   ConnectToDB()
