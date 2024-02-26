@@ -3,10 +3,9 @@ const { signup, login } = require("../Controllers/Authcontrollers");
 const User = require('../data/User');
 
 const Authrout = express.Router();
-Authrout.get('/',async (req,res)=>{
+Authrout.get('/', async (req, res) => {
     const data = await User.find({})
-
-    res.json({msg : true , data : data})
+    res.json({ msg: true, data: data })
 
 })
 

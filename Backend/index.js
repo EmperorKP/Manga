@@ -1,15 +1,17 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
 const mangadata = require('./data/database');
 const cors = require('cors')
 const cookieParser = require('cookie-parser');
+const Router = require('./router/route')
+const Authrout = require('./router/Auth')
+
+const port = process.env.PORT || 3000;
+
+const { ConnectToDB } = require('./db');
+
 app.use(cors())
 app.use(cookieParser());
-
-
-const { ConnectToDB, stopDatabase, isConnected } = require('./db');
-
 app.use(express.json());
 
 // Define the ping route
@@ -17,9 +19,7 @@ app.get('/data', (req, res) => {
   res.send(mangadata);
 });
 
-const Router = require('./router/route')
 app.use('/api', Router)
-const Authrout = require('./router/Auth')
 app.use('/auth',Authrout)
 
 // Updated home route

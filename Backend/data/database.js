@@ -25,8 +25,6 @@ const manga1 = new Manga({
     User: "harsh"
   });
 
-
-
   const manga4 = new Manga({
     postId: 4,
     Title: "Bleach",

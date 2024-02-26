@@ -3,12 +3,12 @@ const Schema = mongoose.Schema;
 
 
 const MangaSchema = new Schema({
-  postId: { type: Number, required: true },  
-  Title: { type: String, required: true },   
+  postId: { type: Number, required: true },
+  Title: { type: String, required: true },
   Image: String,
   Author: String,
   User: String,
-  Time: { type: Date, default: Date.now() }, 
+  Time: { type: Date, default: Date.now() },
 }, { timestamps: true });
 
 
