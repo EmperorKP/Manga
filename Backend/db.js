@@ -15,16 +15,16 @@ async function ConnectToDB() {
   console.log('Connected to MongoDB database.');
 }
 
-async function stopDatabase() {
-  if (!mongoConnection) return;
+// async function stopDatabase() {
+//   if (!mongoConnection) return;
 
-  await mongoConnection.close();
-  mongoConnection = null;
+//   await mongoConnection.close();
+//   mongoConnection = null;
 
-  console.log('Disconnected from local MongoDB database.');
-}
+//   console.log('Disconnected from local MongoDB database.');
+// }
 
-function isConnected() {
-  return mongoConnection.readyState === 1;
-}
-module.exports = { ConnectToDB, stopDatabase, isConnected };
+// function isConnected() {
+//   return mongoConnection.readyState === 1;
+// }
+module.exports = { ConnectToDB };

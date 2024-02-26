@@ -24,10 +24,10 @@ app.use('/auth',Authrout)
 
 // Updated home route
 app.get('/', async (req, res) => {
-  const dbStatus = isConnected() ? 'connected' : 'disconnected';
+  // const dbStatus = isConnected() ? 'disconnected':'connected';
   res.send({
     message: 'o_O',
-    database: dbStatus,
+    // database: dbStatus,
   });
 });
 
